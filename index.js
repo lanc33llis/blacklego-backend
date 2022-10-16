@@ -15,7 +15,7 @@ gun.get("incidents").put({
   id: "1",
   title: "test",
   description: "test",
-  location: [30.286489, -97.736718],
+  location: { latitude: 30.286489, longitude: -97.736718 },
   image: "test",
   date: "test",
 });
