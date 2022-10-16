@@ -12,13 +12,14 @@ const server = app.listen(port, () => {
 var gun = Gun({ web: server });
 
 gun.get("incidents").put({
-  object: {
-    id: "1",
-    title: "test",
-    description: "test",
-    location: { latitude: 30.286489, longitude: -97.736718 },
-    image: "test",
-    date: "test",
-  },
-  nested: true,
+  id: "1",
+  title: "test",
+  description: "test",
+  location: [30.286489, -97.736718],
+  image: "test",
+  date: "test",
+});
+
+gun.get("incidents").once((data) => {
+  console.log(data);
 });
